@@ -7,7 +7,7 @@ const API_BASE = import.meta.env.VITE_API_BASE;
 const API_PATH = import.meta.env.VITE_API_PATH;
 function App() {
   const [formData, setFormData] = useState({
-    username: 'lynn202400095@gmail.com',
+    username: '',
     password: ''
   })
   const [isAuth, setIsAuth] = useState(false);
