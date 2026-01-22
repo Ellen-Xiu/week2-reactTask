@@ -50,18 +50,18 @@ function App() {
       .find((row) => row.startsWith("userToken="))
       ?.split("=")[1];
       axios.defaults.headers.common['Authorization'] = token;
-      console.log(response);
+      //console.log(response);
     } catch (error) {
-      console.log(error);
-      alert('登入失敗請確認帳密輸入是否正確',)
+      //console.log(error);
+      alert('登入失敗請確認帳密輸入是否正確');
     }
   }
   const getProducts = async() => {
     try {
       const response = await axios.get(`${API_BASE}/api/${API_PATH}/admin/products`)
-      setProducts(response.data.products)
+      setProducts(response.data.products);
     } catch (error) {
-      console.log(error.response)
+      alert(error.response.data.message);
     }
   }
   const renderOriginPrice = (originPrice, price) => {
